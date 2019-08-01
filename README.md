@@ -20,6 +20,10 @@ The dataset is modified based on FlyingThings3D in [Scene Flow Datasets](https:/
 
 ## Train
 
+### Logging
+
+We use Tensorboard for logging training progress. Recommended: execute `tensorboard --logdir /path/to/save_dir --port 9001` and visit `localhost:9001` in the browser.
+
 ## Evaluation
 
 ## Citation
