@@ -36,7 +36,7 @@ We use Tensorboard for logging training progress. Recommended: execute `tensorbo
 
 Once the network is trained, the performance can be evaluated using the testing dataset. 
 ```
-python depth_estimation.py
+python depth_estimation_test.py
 ```
 Change `results_dir` to the place you save your model. Once the testing is finished, a new folder called `test_all` will be created inside the model directory. It contains 400 scenes, and each one includes a clean image `sharp.png`, a coded image `blur.png`, an estimated disparity map `phiHat.png`, and a ground truth disparity map `phiGT.png`.
 
