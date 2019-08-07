@@ -38,7 +38,9 @@ Once the network is trained, the performance can be evaluated using the testing 
 ```
 python depth_estimation.py
 ```
-Change `results_dir` to the place you save your model. If you just want to see the performance of our best result, type `results_dir="./trained_framework/"`. Once the code is finished, a new folder called `test_all` will be created inside the model directory. It contains 400 scenes, and each one includes a clean image `sharp.png`, a coded image `blur.png`, an estimated disparity map `phiHat.png`, and a ground truth disparity map `phiGT.png`. Sample images are shown below.
+Change `results_dir` to the place you save your model. Once the testing is finished, a new folder called `test_all` will be created inside the model directory. It contains 400 scenes, and each one includes a clean image `sharp.png`, a coded image `blur.png`, an estimated disparity map `phiHat.png`, and a ground truth disparity map `phiGT.png`.
+
+If you want to see the performance of our best result, please download from [Google Drive](https://drive.google.com/drive/folders/12zqZjkllc9IllSIloOSfJNlkDvHL46Hb?usp=sharing). Sample images are shown below.
 
 <p align="center">
   <img width="500" src="/figures/PhaseCam3D_sim_results.png">
