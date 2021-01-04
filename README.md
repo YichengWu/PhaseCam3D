@@ -1,6 +1,6 @@
 # PhaseCam3D
 
-### [Project](http://yicheng.rice.edu/phasecam3d/) | [Video](https://www.youtube.com/watch?time_continue=751&v=CV4vEAjBv20) | [Paper](https://ieeexplore.ieee.org/document/8747330)
+### [Project](https://yichengwu.github.io/PhaseCam3D/) | [Video](https://www.youtube.com/watch?time_continue=751&v=CV4vEAjBv20) | [Paper](https://drive.google.com/file/d/1ISWnM1NhrcNpu5vBtejTQdS9GNuiQyqW/view?usp=sharing)
 
 This repository contains TensorFlow implementation for the ICCP2019 paper *PhaseCam3D — Learning Phase Masks for Passive Single View Depth Estimation* by [Yicheng Wu](http://yicheng.rice.edu), [Vivek Boominathan](https://vivekboominathan.com/), [Huaijin Chen](http://hc25.web.rice.edu/), [Aswin Sankaranarayanan](http://users.ece.cmu.edu/~saswin/), and [Ashok Veeraraghavan](http://computationalimaging.rice.edu/team/ashok-veeraraghavan/).
 
@@ -72,4 +72,4 @@ If you use this code for your research, please cite our papers.
 }
 ```
 ## Contributions
-If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Yicheng Wu (yicheng.wu@rice.edu).
+If you have any questions/comments/bug reports, feel free to open a github issue or pull a request or e-mail to the author Yicheng Wu (wuyichengg@gmail.com).
