@@ -1,0 +1,210 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PhaseCam3D</title>
+  <meta name="author" content="Yicheng Wu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84261930-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-84261930-1');
+	</script>
+
+  <link rel="icon" type="image/png" href="data/Rice_logo.png">    
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-5 publication-title"><i>ICCP 2019 <a href="data/phasecam3d_best_poster_award.jpg">Best Poster Award</a></i></h1>
+          <h1 class="title is-1 publication-title">PhaseCam3D</h1>
+		      <h1 class="title is-3 publication-title">Learning Phase Masks for Passive Single View Depth Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yicheng.rice.edu">Yicheng Wu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vivekboominathan.com/">Vivek Boominathan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://hc25.web.rice.edu/">Huaijin Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://imagesci.ece.cmu.edu/index.html">Aswin Sankaranarayanan</a><sup>2</sup>,
+            <span class="author-block">
+              <a href="https://computationalimaging.rice.edu/"> Ashok Veeraraghavan</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Rice University</span>
+			<span class="author-block"><sup>2</sup>CMU</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1ISWnM1NhrcNpu5vBtejTQdS9GNuiQyqW/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=CV4vEAjBv20"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Talk</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/YichengWu/PhaseCam3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="columns is-centered">
+	<table>
+	  <tr>
+    <td style="padding:0 20px 0 250px;">
+      <img src="./data/prototype.jpg" alt="centered image" />
+    </td>
+    <td style="padding:0 250px 0 20px;">
+			<img src='data/phasecam3d_image.png' onmouseover="this.src='data/phasecam3d_disparity.png';" onmouseout="this.src='data/phasecam3d_image.png';" alt="centered image" />
+		</td>
+	  </tr>
+	</table>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <div class="content has-text-justified">
+        <p>
+          <b>Left:</b> PhaseCam3D prototype. A learned phase mask is fabricated and attached on the aperture of a DSLR lens.
+          <b>Right:</b> A captured coded image using PhaseCam3D and (hover over the image) the estimated disparity from the digital network.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            There is an increasing need for passive 3D scanning in many applications that have stringent energy constraints. In this paper, we present an approach for single frame, single viewpoint, passive 3D imaging using a phase mask at the aperture plane of a camera. Our approach relies on an end-to-end optimization framework to jointly learn the optimal phase mask and the reconstruction algorithm that allows an accurate estimation of range image from captured data. Using our optimization framework, we design a new phase mask that performs significantly better than existing approaches. We build a prototype by inserting a phase mask fabricated using photolithography into the aperture plane of a conventional camera and show compelling performance in 3D imaging.          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <!--/ Abstract. -->
+  
+  
+  
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">End-to-end training pipeline</h2>
+		  <img src="./data/pipeline.png"/ width="800">
+    </div>  
+  </div>
+
+  <section class="section">  
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">ICCP talk</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/CV4vEAjBv20?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </section>  
+ 
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>  @inproceedings{wu2019phasecam3d,
+      title={Phasecam3d—learning phase masks for passive single view depth estimation},
+      author={Wu, Yicheng and Boominathan, Vivek and Chen, Huaijin and Sankaranarayanan, Aswin and Veeraraghavan, Ashok},
+      booktitle={2019 IEEE International Conference on Computational Photography (ICCP)},
+      pages={1--12},
+      year={2019},
+      organization={IEEE}
+}</code></pre>
+  </div>
+</section>
+ 
+ 
+ <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a href="https://drive.google.com/file/d/1ISWnM1NhrcNpu5vBtejTQdS9GNuiQyqW/view?usp=sharing">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a href="https://github.com/YichengWu/PhaseCam3D" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+
+    </div>
+  </div>
+</footer>
+ 
+</html>
